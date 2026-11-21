@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 25% 98%;
+    --foreground: 220 55% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 55% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 55% 12%;
+    --primary: 217 64% 12%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 20% 95%;
+    --secondary-foreground: 220 55% 14%;
+    --muted: 220 20% 95%;
+    --muted-foreground: 220 12% 44%;
+    --accent: 34 92% 95%;
+    --accent-foreground: 26 90% 30%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 18% 89%;
+    --input: 220 18% 86%;
+    --ring: 32 92% 49%;
+    --radius: 0.625rem;
+  }
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+  .tabular { font-variant-numeric: tabular-nums; }
+}
+
+@layer components {
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+  .glow-solar { box-shadow: 0 0 0 1px rgba(240,138,12,.25), 0 20px 60px -20px rgba(240,138,12,.45); }
+}
+
+.recharts-cartesian-axis-tick-value { font-size: 11px; fill: hsl(220 12% 44%); }
