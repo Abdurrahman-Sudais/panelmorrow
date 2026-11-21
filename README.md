@@ -68,6 +68,6 @@ Copy `.env.example` to `.env.local`. Only public values belong there — **never
 
 ## Website: lead capture, AWS section and motion
 
-- **Demo request** (home page, `#demo`) asks for company size, organisation type, primary use case and portfolio size; **contact** (`/contact`) has a topic picker. Both post to HubSpot when `VITE_HUBSPOT_*` is set (see `.env.example` and `docs/crm-plan.md`), otherwise they open a pre-filled email to hello@panelmorrow.com.
+- **Demo request** (home page, `#demo`) asks for company size, organisation type, primary use case and portfolio size; **contact** (`/contact`) has a topic picker. Both post to HubSpot when `VITE_HUBSPOT_*` is set (see `.env.example` and `docs/crm-plan.md`), otherwise they open a pre-filled email to nkem@panelmorrow.space.
 - **Planned AWS infrastructure** and **progress** sections on the home page are driven by `src/kit/site.ts`.
 - **Motion:** headings, intros and card grids fade, rise and sharpen in sequence on scroll; the hero headline enters word by word with a cycling “Built for” line, followed by a marquee band and count-up figures from the demo data (`src/kit/flow.ts`, `src/kit/Flow.tsx`). Everything is shown immediately for visitors who prefer reduced motion.

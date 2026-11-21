@@ -14,7 +14,7 @@ export type Site = {
 };
 
 export const SITE: Site = {
-  name: "PanelMorrow", email: "hello@panelmorrow.com", founder: "Nkem Uche",
+  name: "PanelMorrow", email: "nkem@panelmorrow.space", founder: "Nkem Uche",
   orgLabel: "Organisation type", orgTypes: ["Solar O&M contractor", "Commercial solar operator", "Independent power producer", "Asset manager", "Other"],
   useCases: ["Performance analysis", "Anomaly detection", "Inspection prioritisation", "Repair verification", "Reports", "Other"],
   topics: ["Pilot programme", "Pricing", "Technical / AWS deployment", "Data import and integrations", "Partnership", "Other"],
