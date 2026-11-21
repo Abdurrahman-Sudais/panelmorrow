@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useFlow } from "@/kit/flow";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { Menu, Linkedin, Twitter, Mail } from "lucide-react";
 import { Logo } from "@/components/common/Logo";
@@ -17,6 +18,8 @@ const NAV = [
 ];
 
 export function PublicLayout() {
+  const flowLoc = useLocation();
+  useFlow(flowLoc.pathname + flowLoc.hash);
   const { pathname } = useLocation();
   const { session } = useAuth();
   const [open, setOpen] = useState(false);
@@ -76,7 +79,7 @@ export function PublicLayout() {
                   <Link to="/login">Log in</Link>
                 </Button>
                 <Button asChild variant="solar">
-                  <Link to="/register">Start free trial</Link>
+                  <Link to="/#demo">Request a demo</Link>
                 </Button>
               </>
             )}
@@ -100,7 +103,7 @@ export function PublicLayout() {
           </nav>
           <div className="mt-auto flex flex-col gap-2">
             <Button asChild variant="outline"><Link to="/login">Log in</Link></Button>
-            <Button asChild variant="solar"><Link to="/register">Start free trial</Link></Button>
+            <Button asChild variant="solar"><Link to="/#demo">Request a demo</Link></Button>
           </div>
         </SheetContent>
       </Dialog>

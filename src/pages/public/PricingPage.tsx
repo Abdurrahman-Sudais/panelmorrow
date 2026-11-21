@@ -10,8 +10,8 @@ const TIERS = [
     price: "$249",
     unit: "/ month",
     desc: "For small O&M teams getting started with data-driven maintenance.",
-    cta: "Start free trial",
-    to: "/register",
+    cta: "Request a demo",
+    to: "/#demo",
     features: ["Up to 15 sites / 5 MW", "Weather-adjusted performance", "Anomaly detection", "Inspection queue", "CSV imports", "Monthly PDF reports", "Email support"],
   },
   {
@@ -19,8 +19,8 @@ const TIERS = [
     price: "$890",
     unit: "/ month",
     desc: "For growing contractors and operators managing multi-client portfolios.",
-    cta: "Start free trial",
-    to: "/register",
+    cta: "Request a demo",
+    to: "/#demo",
     featured: true,
     features: ["Up to 100 sites / 50 MW", "Everything in Starter", "Custom priority weighting", "Repair verification", "Technician assignment", "AI report summaries", "API access", "Priority support"],
   },
@@ -38,7 +38,7 @@ const TIERS = [
 export default function PricingPage() {
   return (
     <>
-      <PageHero eyebrow="Pricing" title="Simple pricing that scales with your portfolio." description="Every plan includes a 14-day free trial with the full demo dataset. No credit card required." />
+      <PageHero eyebrow="Pricing" title="Simple pricing that scales with your portfolio." description="Pricing is illustrative for a proposed product. Start with a demo on the fictional dataset." />
       <section className="container -mt-10 pb-12">
         <div className="grid gap-6 lg:grid-cols-3">
           {TIERS.map((t) => (

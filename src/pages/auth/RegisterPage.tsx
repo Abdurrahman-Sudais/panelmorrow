@@ -41,7 +41,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <AuthLayout title="Start your free trial" subtitle={<>Already have an account? <Link to="/login" className="font-medium text-solar-600 hover:underline">Sign in</Link></>}>
+    <AuthLayout title="Create a demo account" subtitle={<>Already have an account? <Link to="/login" className="font-medium text-solar-600 hover:underline">Sign in</Link></>}>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(submit)} className="space-y-4">
           <div className="grid gap-4 sm:grid-cols-2">

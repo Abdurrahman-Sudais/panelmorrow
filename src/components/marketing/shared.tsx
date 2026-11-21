@@ -54,7 +54,7 @@ export function CtaBand() {
           </div>
           <div className="flex flex-wrap gap-3">
             <Button asChild size="lg" variant="solar">
-              <Link to="/register">Start free trial <ArrowRight /></Link>
+              <Link to="/#demo">Request a demo <ArrowRight /></Link>
             </Button>
             <Button asChild size="lg" variant="glass">
               <Link to="/contact">Book a demo</Link>

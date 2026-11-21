@@ -1,3 +1,6 @@
+import { Cycle, Marquee, Stats, Words } from "@/kit/Flow";
+import { AwsSection, ProgressAndDemo } from "@/kit/Sections";
+import { SITE } from "@/kit/site";
 import { Link } from "react-router-dom";
 import {
   Activity,
@@ -48,22 +51,22 @@ export default function HomePage() {
               Solar asset performance analytics for O&amp;M teams
             </span>
             <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl md:leading-[1.05]">
-              Know Which Solar Sites Are Losing Performance.{" "}
-              <span className="bg-gradient-to-r from-solar-300 to-solar-500 bg-clip-text text-transparent">Know Where to Go First.</span>
+              <Words>Know which solar sites are losing performance.{" "}<span className="bg-gradient-to-r from-solar-300 to-solar-500 bg-clip-text text-transparent">Know where to go first.</span></Words>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-navy-200">
               PanelMorrow analyses solar generation against expected weather-adjusted performance, identifies unusual output patterns, and helps maintenance teams prioritize inspections based on recoverable energy.
             </p>
+            <p className="mt-4 text-base text-navy-200"><Cycle lead="Built for" items={SITE.cycle} accent="text-solar-400" /></p>
             <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
               <Button asChild size="lg" variant="solar">
-                <Link to="/register">Start free trial <ArrowRight /></Link>
+                <a href="#demo">Request a demo <ArrowRight /></a>
               </Button>
               <Button asChild size="lg" variant="glass">
                 <Link to="/login">Explore the live demo</Link>
               </Button>
             </div>
             <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-navy-300">
-              {["No hardware to install", "Works with any inverter export", "SOC 2-aligned AWS architecture"].map((t) => (
+              {["No hardware to install", "Works with any inverter export", "Planned AWS architecture"].map((t) => (
                 <span key={t} className="flex items-center gap-1.5"><CheckCircle2 className="h-3.5 w-3.5 text-teal-400" />{t}</span>
               ))}
             </div>
@@ -74,6 +77,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <Marquee items={SITE.marquee} label={`What ${SITE.name} is built for`} />
+      <Stats items={SITE.stats} />
 
       {/* STATS */}
       <section className="border-b bg-white">
@@ -233,16 +239,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* TESTIMONIAL */}
+      {/* PRINCIPLE */}
       <section className="border-y bg-white">
         <div className="container py-16 text-center">
-          <Eyebrow>Built with O&amp;M teams</Eyebrow>
-          <blockquote className="mx-auto mt-5 max-w-3xl text-2xl font-medium leading-snug tracking-tight text-navy-900">
-            “We used to visit every site on a rota. Now the first truck out each Monday goes to the site with the most recoverable energy — and we can show the client what the visit changed.”
-          </blockquote>
-          <p className="mt-5 text-sm text-muted-foreground">Head of Operations, pilot O&amp;M contractor (illustrative)</p>
+          <Eyebrow>How we think about it</Eyebrow>
+          <p className="mx-auto mt-5 max-w-3xl text-2xl font-medium leading-snug tracking-tight text-navy-900">
+            Visit sites in the order of the energy you can recover — and show the client, with weather-adjusted numbers, what each visit changed.
+          </p>
+          <p className="mt-5 text-sm text-muted-foreground">The approach behind PanelMorrow’s inspection queue and repair verification.</p>
         </div>
       </section>
+
+      <AwsSection />
+
+      <ProgressAndDemo />
 
       <CtaBand />
     </>
